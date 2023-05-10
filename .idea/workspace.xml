@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec6582cf-3458-43d9-90c3-25b482f11072" name="Changes" comment="Ukończenie Talentów. Dodanie klasy atrybutów. Rozpoczęcie pracy nad Skillami">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ec6582cf-3458-43d9-90c3-25b482f11072" name="Changes" comment="Poprawa Talentów. Dodanie kilku metod do klasy Character">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Talent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Talent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <updated>1682359054337</updated>
       <workItem from="1682359055308" duration="2530000" />
       <workItem from="1682426124619" duration="8346000" />
-      <workItem from="1682445018767" duration="27215000" />
+      <workItem from="1682445018767" duration="29414000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1682359764885</created>
@@ -92,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682615624512</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Poprawa Talentów. Dodanie kilku metod do klasy Character">
+      <created>1683759280321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683759280321</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +119,7 @@
     <MESSAGE value="Utworzenie kilku nowych klas + dodanie wszystkich klas do Talent." />
     <MESSAGE value="Zmiana konstruktorów. Dodanie ponad połowy ciał do nich" />
     <MESSAGE value="Ukończenie Talentów. Dodanie klasy atrybutów. Rozpoczęcie pracy nad Skillami" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ukończenie Talentów. Dodanie klasy atrybutów. Rozpoczęcie pracy nad Skillami" />
+    <MESSAGE value="Poprawa Talentów. Dodanie kilku metod do klasy Character" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawa Talentów. Dodanie kilku metod do klasy Character" />
   </component>
 </project>

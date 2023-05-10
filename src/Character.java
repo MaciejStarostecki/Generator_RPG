@@ -6,7 +6,7 @@ public class Character {
 
     String name;
     String sex;
-    Career career = new Career();
+    Career career;
     String specie;
     Attribute walka_wrecz;
     Attribute umiejetnosci_strzeleckie;
@@ -18,8 +18,8 @@ public class Character {
     Attribute inteligencja;
     Attribute sila_woli;
     Attribute oglada;
-    int zywotnosc;
-    int szybkosc;
+    int zywotnosc = 0;
+    int szybkosc = 0;
     ArrayList<Skill> skills;
     ArrayList<Talent> talents;
 
@@ -382,7 +382,16 @@ public class Character {
     }
 
     private void generateAttributes(String specie){
-
+        walka_wrecz = new Attribute(20);
+        umiejetnosci_strzeleckie = new Attribute(20);
+        sila = new Attribute(20);
+        wytrzymalosc = new Attribute(20);
+        inicjatywa = new Attribute(20);
+        zwinnosc = new Attribute(20);
+        zrecznosc = new Attribute(20);
+        inteligencja = new Attribute(20);
+        sila_woli = new Attribute(20);
+        oglada = new Attribute(20);
     }
 
     private void generateSkills(String specie, Career career) {
@@ -396,6 +405,45 @@ public class Character {
 
     }
 
-
-
+    @Override
+    public String toString() {
+        return  "Imię: " + name +
+                "    Płeć: " + sex +
+                "    Rasa: " + specie +
+                "    Profesja: " + career +
+                "    Kariera: " + career +
+                "\r\n" +
+                "\r\n" +
+                "WW" +
+                "    US" +
+                "    S " +
+                "    WT" +
+                "    I " +
+                "    ZW" +
+                "    ZR" +
+                "    INT" +
+                "   SW" +
+                "    OGD" +
+                "   ŻYW" +
+                "   SZ" +
+                "\r\n" +
+                walka_wrecz.starting +
+                "    " + umiejetnosci_strzeleckie.starting +
+                "    " + sila.starting +
+                "    " + wytrzymalosc.starting +
+                "    " + inicjatywa.starting +
+                "    " + zwinnosc.starting +
+                "    " + zrecznosc.starting +
+                "    " + inteligencja.starting +
+                "    " + sila_woli.starting +
+                "    " + oglada.starting +
+                "    " + zywotnosc +
+                "     " + szybkosc +
+                "\r\n" + "\r\n" +
+                "Umiejętności:" + "\r\n" +
+                skills +
+                "\r\n" +  "\r\n" +
+                "Talenty:" + "\r\n" +
+                talents;
+    }
 }
