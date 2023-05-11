@@ -96,8 +96,8 @@ class BerserkerskaSzarza extends Talent{
     }
 }
 
-class Biczownik extends Talent{
-    public Biczownik (Attribute wytrzymalosc) {
+class BiczownikTalent extends Talent{
+    public BiczownikTalent (Attribute wytrzymalosc) {
         super("Biczownik",
                 "Swój ból ofiarowałeś wyznawanemu bogu. Każdego dnia musisz spędzić pół dzwonu (pół godziny) na modlitwie, otrzymując obrażenia na poziomie liczby wykupień tego Talentu. Jeśli posiadasz Talent Szał Bojowy, to do położenia się na najbliższy spoczynek możesz natychmiast wpaść w Szał Bojowy bez wykonywania Testów.\nSzał Bojowy zostaje dodany do listy Talentów dostępnych dla twojej bieżącej Profesji. Jeśli zaniedbasz biczowanie przez jeden dzień lub pozwolisz, by poszarpana skóra została uleczona, nie będziesz mógł wydawać Punktów Bohatera ani Determinacji, póki się znów nie wybiczujesz.",
                 wytrzymalosc.summary/10);

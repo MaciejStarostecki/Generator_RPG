@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec6582cf-3458-43d9-90c3-25b482f11072" name="Changes" comment="Poprawa Talentów. Dodanie kilku metod do klasy Character">
+    <list default="true" id="ec6582cf-3458-43d9-90c3-25b482f11072" name="Changes" comment="Wstępne przygotowanie Stringa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Attribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Career.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Career.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Talent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Talent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +53,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Generator_RPG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +77,8 @@
       <updated>1682359054337</updated>
       <workItem from="1682359055308" duration="2530000" />
       <workItem from="1682426124619" duration="8346000" />
-      <workItem from="1682445018767" duration="29414000" />
+      <workItem from="1682445018767" duration="29738000" />
+      <workItem from="1683820691089" duration="11850000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1682359764885</created>
@@ -97,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683759280321</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wstępne przygotowanie Stringa">
+      <created>1683761496537</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683761496537</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +145,18 @@
     <MESSAGE value="Zmiana konstruktorów. Dodanie ponad połowy ciał do nich" />
     <MESSAGE value="Ukończenie Talentów. Dodanie klasy atrybutów. Rozpoczęcie pracy nad Skillami" />
     <MESSAGE value="Poprawa Talentów. Dodanie kilku metod do klasy Character" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poprawa Talentów. Dodanie kilku metod do klasy Character" />
+    <MESSAGE value="Wstępne przygotowanie Stringa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wstępne przygotowanie Stringa" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -20,15 +20,15 @@ public class Character {
     Attribute oglada;
     int zywotnosc = 0;
     int szybkosc = 0;
-    ArrayList<Skill> skills;
-    ArrayList<Talent> talents;
+    ArrayList<Skill> skills = new ArrayList<>();
+    ArrayList<Talent> talents = new ArrayList<>();
 
     public Character() {
         generateSex();
         generateSpecie();
         generateName(sex, specie);
         generateCareer(specie);
-        generateAttributes(specie);
+        generateAttributes(specie, career);
         generateSkills(specie, career);
         generateTalents(specie, career);
     }
@@ -148,7 +148,7 @@ public class Character {
                 case 91: name = "Sam"; break; case 92: name = "Supp"; break; case 93: name = "Taff"; break; case 94: name = "Talb"; break; case 95: name = "Talc"; break; case 96: name = "Tay"; break; case 97: name = "Tom"; break; case 98: name = "Wald"; break; case 99: name = "Watt"; break; case 100: name = "Will"; break;
             }
             switch (sex) {
-                case "Męczyzna":
+                case "Mężczyzna":
                     number = random.nextInt(14) + 1;
                     switch (number) {
                         case 1: name += "belly "; break; case 2: name += "er "; break; case 3: name += "fast "; break; case 4: name += "in "; break; case 5: name += "it "; break; case 6: name += "mutch "; break; case 7: name += "o "; break; case 8: name += "odoc "; break; case 9: name += "riadoc "; break; case 10: name += "regar "; break;
@@ -378,25 +378,163 @@ public class Character {
     }
 
     private void generateCareer(String specie) {
+        career = new Aptekarka(4);
+//        int number;
+//        Random random = new Random()
 
-    }
+//        number = random.nextInt(100) + 1;
+//        if (number <= 58) profesja.poziom_profesji = 1;
+//        else if (number > 58 && number <= 87) profesja.poziom_profesji = 2;
+//        else if (number > 87 && number < 97) profesja.poziom_profesji = 3;
+//        else profesja.poziom_profesji = 4;
 
-    private void generateAttributes(String specie){
-        walka_wrecz = new Attribute(20);
-        umiejetnosci_strzeleckie = new Attribute(20);
-        sila = new Attribute(20);
-        wytrzymalosc = new Attribute(20);
-        inicjatywa = new Attribute(20);
-        zwinnosc = new Attribute(20);
-        zrecznosc = new Attribute(20);
-        inteligencja = new Attribute(20);
-        sila_woli = new Attribute(20);
-        oglada = new Attribute(20);
+//        number = random.nextInt(100) + 1;
+//        switch (specie) {
+//            case "Człowiek":
+//                if (number == 1) career = new Aptekarka(); else if (number == 2) career = new Czarodziej(); else if (number == 3) career = new Inzynier(); else if (number >= 4 && number <= 8) career = new Kaplan(); else if (number == 9) career = new Medyk(); else if (number >= 10 && number <= 11) career = new Mnich(); else if (number == 12) career = new "Prawnik"; else if (number >= 13 && number <= 14) career = new Uczony();
+//                else if (number == 15) career = new Agitator(); else if (number == 16) career = new Kupiec(); else if (number >= 17 && number <= 19) career = new Mieszczanin(); else if (number >= 20 && number <= 21) career = new Rzemieslnik(); else if (number == 22) career = new Straznik(); else if (number >= 23 && number <= 24) career = new Szczurolap(); else if (number == 25) career = new Sledczy(); else if (number >= 26 && number <= 27) career = new Zebrak();
+//                else if (number == 28) career = new Artysta(); else if (number == 29) career = new Doradca(); else if (number == 30) career = new Namiestnik(); else if (number == 31) career = new Posel(); else if (number >= 32 && number <= 34) career = new Sluzacy(); else if (number == 35) career = new Szlachcic(); else if (number == 36) career = new Szpieg(); else if (number == 37) career = new Zwadzca();
+//                else if (number >= 38 && number <= 42) career = new Chlopka(); else if (number == 43) career = new Gornik(); else if (number == 44) career = new Guslarz(); else if (number >= 45 && number <= 46) career = new Lowca(); else if (number == 47) career = new Mistyk(); else if (number == 48) career = new Zarzadca(); else if (number == 49) career = new Zielarz(); else if (number == 50) career = new Zwiadowca();
+//                else if (number >= 51 && number <= 52) career = new BiczownikCareer(); else if (number == 53) career = new Domokrazca(); else if (number >= 54 && number <= 55) career = new Kuglarz(); else if (number == 56) career = new LowcaCzarownic(); else if (number == 57) career = new LowcaNagrod(); else if (number == 58) career = new Poslaniec(); else if (number == 59) career = new StraznikDrog(); else if (number == 60) career = new Woznica();
+//                else if (number >= 61 && number <= 62) career = new Doker(); else if (number >= 63 && number <= 65) career = new Flisak(); else if (number == 66) career = new Pilot Rzeczny(); else if (number == 67) career = new PiratRzeczny(); else if (number == 68) career = new Przemytnik(); else if (number >= 69 && number <= 70) career = new Przewoznik(); else if (number >= 71 && number <= 72) career = new StraznikRzeczny(); else if (number >= 73 && number <= 74) career = new Zeglarz();
+//                else if (number >= 75 && number <= 78) career = new Banita(); else if (number == 79) career = new Czarownik(); else if (number == 80) career = new HienaCmentarna(); else if (number == 81) career = new Paser(); else if (number >= 82 && number <= 83) career = new Rajfur(); else if (number == 84) career = new Rakieter(); else if (number == 85) career = new Szarlatan(); else if (number >= 86 && number <= 88) career = new Zlodziej();
+//                else if (number == 89) career = new Gladiator(); else if (number == 90) career = new KaplanBitewny(); else if (number >= 91 && number <= 92) career = new Kawalerzysta(); else if (number >= 93 && number <= 94) career = new Ochroniarz(); else if (number == 95) career = new Oprych(); else if (number == 96) career = new Rycerz(); else career = new Zolnierz();
+//                break;
+//            case "Niziołek":
+//                if (number == 1) career = new Aptekarka(); else if (number == 2) career = new Inzynier(); else if (number >= 3 && number <= 4) career = new Medyk(); else if (number >= 5 && number <= 6) career = new Prawnik(); else if (number >= 7 && number <= 8) career = new Uczony();
+//                else if (number >= 9 && number <= 10) career = new "Agitator"; else if (number >= 11 && number <= 14) career = new "Kupiec"; else if (number >= 15 && number <= 17) career = new "Mieszczanin"; else if (number >= 18 && number <= 22) career = new "Rzemieslnik"; else if (number >= 23 && number <= 24) career = new "Straznik"; else if (number >= 25 && number <= 27) career = new "Szczurolap"; else if (number >= 28 && number <= 29) career = new "Sledczy"; else if (number >= 30 && number <= 33) career = new "Zebrak";
+//                else if (number >= 34 && number <= 35) career = new "Artysta"; else if (number == 36) career = new "Doradca"; else if (number >= 37 && number <= 38) career = new "Namiestnik"; else if (number == 39) career = new "Posel"; else if (number >= 40 && number <= 45) career = new "Sluzacy"; else if (number == 46) career = new "Szpieg";
+//                else if (number >= 47 && number <= 49) career = new "Chlopka"; else if (number == 50) career = new "Gornik"; else if (number >= 51 && number <= 52) career = new "Lowca"; else if (number == 53) career = new "Zarzadca"; else if (number >= 54 && number <= 56) career = new "Zielarz"; else if (number == 57) career = new "Zwiadowca";
+//                else if (number >= 58 && number <= 59) career = new "Domokrazca"; else if (number >= 60 && number <= 62) career = new "Kuglarz"; else if (number == 63) career = new "Lowca Nagrod"; else if (number >= 64 && number <= 65) career = new "Poslaniec"; else if (number == 66) career = new "Straznik Drog"; else if (number >= 67 && number <= 68) career = new "Woznica";
+//                else if (number >= 69 && number <= 71) career = new "Doker"; else if (number >= 72 && number <= 74) career = new "Flisak"; else if (number == 75) career = new "Pilot Rzeczny"; else if (number >= 76 && number <= 79) career = new "Przemytnik"; else if (number == 80) career = new "Przewoznik"; else if (number == 81) career = new "Straznik Rzeczny"; else if (number == 82) career = new "Zeglarz";
+//                else if (number == 83) career = new "Banita"; else if (number == 85) career = new "Hiena Cmentarna"; else if (number == 84) career = new "Paser"; else if (number >= 86 && number <= 88) career = new "Rajfur"; else if (number == 89) career = new "Rakieter"; else if (number == 90) career = new "Szarlatan"; else if (number >= 91 && number <= 94) career = new "Zlodziej";
+//                else if (number == 95) career = new "Gladiator"; else if (number >= 96 && number <= 97) career = new "Ochroniarz"; else career = new "Zolnierz";
+//                break;
+//            case "Krasnolud":
+//                if (number == 1) career = new "Aptekarz"; else if (number >= 2 && number <= 4) career = new "Inzynier"; else if (number == 5) career = new "Medyk"; else if (number >= 6 && number <= 7) career = new "Prawnik"; else if (number >= 8 && number <= 9) career = new "Uczony";
+//                else if (number >= 10 && number <= 11) career = new "Agitator"; else if (number >= 12 && number <= 15) career = new "Kupiec"; else if (number >= 16 && number <= 21) career = new "Mieszczanin"; else if (number >= 22 && number <= 27) career = new "Rzemieslnik"; else if (number >= 28 && number <= 30) career = new "Straznik"; else if (number == 31) career = new "Szczurolap"; else if (number >= 32 && number <= 33) career = new "Sledczy"; else if (number == 34) career = new "Zebrak";
+//                else if (number == 35) career = new "Artysta"; else if (number >= 36 && number <= 37) career = new "Doradca"; else if (number >= 38 && number <= 39) career = new "Namiestnik"; else if (number >= 40 && number <= 41) career = new "Posel"; else if (number == 42) career = new "Sluzacy"; else if (number == 43) career = new "Szlachcic"; else if (number == 44) career = new "Szpieg"; else if (number == 45) career = new "Zwadzca";
+//                else if (number == 46) career = new "Chlopka"; else if (number >= 47 && number <= 51) career = new "Gornik"; else if (number >= 52 && number <= 53) career = new "Lowca"; else if (number >= 54 && number <= 55) career = new "Zarzadca"; else if (number == 56) career = new "Zwiadowca";
+//                else if (number >= 57 && number <= 58) career = new "Domokrazca"; else if (number >= 59 && number <= 60) career = new "Kuglarz"; else if (number >= 61 && number <= 64) career = new "Lowca Nagrod"; else if (number >= 65 && number <= 66) career = new "Poslaniec"; else if (number == 67) career = new "Woznica";
+//                else if (number >= 68 && number <= 69) career = new "Doker"; else if (number >= 70 && number <= 71) career = new "Flisak"; else if (number == 72) career = new "Pilot Rzeczny"; else if (number == 73) career = new "Pirat Rzeczny"; else if (number >= 74 && number <= 75) career = new "Przemytnik"; else if (number >= 76 && number <= 77) career = new "Przewoznik"; else if (number == 78) career = new "Zeglarz";
+//                else if (number >= 79 && number <= 81) career = new "Banita"; else if (number == 82) career = new "Hiena Cmentarna"; else if (number == 83) career = new "Rakieter"; else if (number == 84) career = new "Zlodziej";
+//                else if (number >= 85 && number <= 87) career = new "Gladiator"; else if (number >= 88 && number <= 90) career = new "Ochroniarz"; else if (number >= 91 && number <= 93) career = new "Oprych"; else if (number >= 94 && number <= 97) career = new "Zabojca"; else career = new "Zolnierz";
+//                break;
+//            case "Wysoki Elf":
+//                if (number >= 1 && number <= 2) career = new "Aptekarz"; else if (number >= 3 && number <= 6) career = new "Czarodziej"; else if (number >= 7 && number <= 8) career = new "Medyk"; else if (number >= 9 && number <= 12) career = new "Prawnik"; else if (number >= 13 && number <= 16) career = new "Uczony";
+//                else if (number >= 17 && number <= 21) career = new "Kupiec"; else if (number >= 22 && number <= 23) career = new "Mieszczanin"; else if (number >= 24 && number <= 26) career = new "Rzemieslnik"; else if (number == 27) career = new "Straznik"; else if (number >= 28 && number <= 29) career = new "Sledczy";
+//                else if (number == 30) career = new "Artysta"; else if (number >= 31 && number <= 32) career = new "Doradca"; else if (number >= 33 && number <= 34) career = new "Namiestnik"; else if (number >= 35 && number <= 37) career = new "Posel"; else if (number >= 38 && number <= 40) career = new "Szlachcic"; else if (number >= 41 && number <= 43) career = new "Szpieg"; else if (number >= 44 && number <= 45) career = new "Zwadzca";
+//                else if (number >= 46 && number <= 48) career = new "Lowca"; else if (number >= 49 && number <= 50) career = new "Zielarz"; else if (number >= 51 && number <= 56) career = new "Zwiadowca";
+//                else if (number >= 57 && number <= 59) career = new "Kuglarz"; else if (number >= 60 && number <= 62) career = new "Lowca Nagrod"; else if (number == 63) career = new "Poslaniec";
+//                else if (number == 64) career = new "Przemytnik"; else if (number == 65) career = new "Przewoznik"; else if (number >= 66 && number <= 80) career = new "Zeglarz";
+//                else if (number >= 81 && number <= 83) career = new "Banita"; else if (number >= 84 && number <= 85) career = new "Rajfur"; else if (number >= 86 && number <= 88) career = new "Szarlatan";
+//                else if (number >= 89 && number <= 90) career = new "Gladiator"; else if (number >= 91 && number <= 94) career = new "Kawalerzysta"; else if (number >= 95 && number <= 96) career = new "Ochroniarz"; else if (number == 97) career = new "Oprych"; else if (number == 98) career = new "Rycerz"; else career = new "Zolnierz";
+//                break;
+//            case "Leśny Elf":
+//                if (number >= 1 && number <= 4) career = new "Czarodziej"; else if (number == 5) career = new "Uczony";
+//                else if (number >= 6 && number <= 10) career = new "Rzemieslnik";
+//                else if (number >= 11 && number <= 14) career = new "Artysta"; else if (number >= 15 && number <= 18) career = new "Doradca"; else if (number >= 19 && number <= 25) career = new "Posel"; else if (number >= 26 && number <= 31) career = new "Szlachcic"; else if (number >= 32 && number <= 35) career = new "Szpieg";
+//                else if (number >= 36 && number <= 45) career = new "Lowca"; else if (number >= 46 && number <= 50) career = new "Mistyk"; else if (number >= 51 && number <= 57) career = new "Zielarz"; else if (number >= 58 && number <= 68) career = new "Zwiadowca";
+//                else if (number >= 69 && number <= 73) career = new "Kuglarz"; else if (number >= 60 && number <= 62) career = new "Lowca Nagrod"; else if (number == 63) career = new "Poslaniec";
+//                else if (number == 79) career = new "Pirat Rzeczny";
+//                else if (number >= 80 && number <= 85) career = new "Banita";
+//                else if (number >= 86 && number <= 87) career = new "Gladiator"; else if (number >= 88 && number <= 92) career = new "Kawalerzysta"; else if (number >= 93 && number <= 94) career = new "Ochroniarz"; else if (number >= 95 && number <= 96) career = new "Rycerz"; else career = new "Zolnierz";
+//                break;
+//        }
+        }
+
+
+    private void generateAttributes(String specie, Career career){
+        Random random = new Random();
+
+        walka_wrecz = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        umiejetnosci_strzeleckie = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        sila = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        wytrzymalosc = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        inicjatywa = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        zwinnosc = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        zrecznosc = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        inteligencja = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        sila_woli = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        oglada = new Attribute(random.nextInt(10) + random.nextInt(10) + 22);
+        zywotnosc = (sila.summary/10)+(wytrzymalosc.summary/10*2)+(sila_woli.summary/10);
+        szybkosc = 4;
     }
 
     private void generateSkills(String specie, Career career) {
+        int i = 0;
+        Skill temp;
+        Random random = new Random();
+        for (String value : career.skills) {
+            if (i < 8) {
+                if (career.careerlevel == 1) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(8));
+                    skills.add(temp);
+                }
 
-    }
+                else if (career.careerlevel == 2) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(4) + 10);
+                    skills.add(temp);
+                }
+
+                else if (career.careerlevel == 3) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(4) + 15);
+                    skills.add(temp);
+                }
+
+                else {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(10) + 20);
+                    skills.add(temp);
+                }
+            }
+
+            else  if (i < 14) {
+                if (career.careerlevel == 2) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(14));
+                    skills.add(temp);
+                }
+
+                else if (career.careerlevel == 3) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(4) + 15);
+                    skills.add(temp);
+                }
+
+                else {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(10) + 20);
+                    skills.add(temp);
+                }
+            }
+
+            else if (i < 18) {
+                if (career.careerlevel == 3) {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(19));
+                    skills.add(temp);
+                }
+
+                else {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(10) + 20);
+                    skills.add(temp);
+                }
+            }
+
+            else {
+                    temp = new Skill(value);
+                    temp.increaseSkill(random.nextInt(30));
+                    skills.add(temp);
+                }
+            i++;
+            }
+        }
+
 
     private void generateTalents(String specie, Career career) {
         Random random = new Random();
@@ -410,8 +548,8 @@ public class Character {
         return  "Imię: " + name +
                 "    Płeć: " + sex +
                 "    Rasa: " + specie +
-                "    Profesja: " + career +
-                "    Kariera: " + career +
+                "    Profesja: " + career.profession +
+                "    Kariera: " + career.career +
                 "\r\n" +
                 "\r\n" +
                 "WW" +
@@ -441,7 +579,7 @@ public class Character {
                 "     " + szybkosc +
                 "\r\n" + "\r\n" +
                 "Umiejętności:" + "\r\n" +
-                skills +
+                skills.toString() +
                 "\r\n" +  "\r\n" +
                 "Talenty:" + "\r\n" +
                 talents;

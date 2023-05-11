@@ -6,9 +6,11 @@ public class Attribute {
 
     public Attribute (int starting) {
         this.starting = starting;
+        summary = starting + advances;
     }
 
     public void raiseAttribute(int value) {
         advances += value;
+        summary = starting + advances;
     }
 }
